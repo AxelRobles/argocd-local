@@ -1,0 +1,9 @@
+# Default values for argo-cd-wrapper.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+argo-cd:
+  # -- Overrides for the Argo CD chart values.
+  # See https://github.com/argoproj/argo-helm/blob/main/charts/argo-cd/values.yaml
+  # for a full list of available values.
+  installCRDs: false
