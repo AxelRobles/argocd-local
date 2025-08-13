@@ -7,3 +7,28 @@ argo-cd:
   # See https://github.com/argoproj/argo-helm/blob/main/charts/argo-cd/values.yaml
   # for a full list of available values.
   installCRDs: false
+
+  # -- Argo CD server settings
+  server:
+    # -- Service type for the Argo CD server
+    service:
+      type: NodePort
+    # -- Number of replicas for the Argo CD server
+    replicas: 1
+    # -- Ingress settings for the Argo CD server
+    ingress:
+      enabled: false
+
+  # -- Argo CD controller settings
+  controller:
+    # -- Number of replicas for the Argo CD controller
+    replicas: 1
+
+  # -- Argo CD repo server settings
+  repoServer:
+    # -- Number of replicas for the Argo CD repo server
+    replicas: 1
+
+  # -- Redis HA settings
+  redis-ha:
+    enabled: false
